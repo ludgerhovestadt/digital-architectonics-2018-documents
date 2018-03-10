@@ -5,7 +5,7 @@ edges = [()]
 faces = [(0,1, 2, 3)]
 
 mesh = bpy.data.meshes.new("mesh")  # add a new mesh
-mesh.from_pydata(verts, [], faces) # define vertices and faces
+mesh.from_pydata(verts, edges, faces) # define vertices and faces
 obj = bpy.data.objects.new("MyObject", mesh)  # add a new object using the mesh
 
 scene = bpy.context.scene # get the scene
